@@ -1,0 +1,151 @@
+/*
+ This css and associated images borrow heavily from the fantastic 
+ chosen select box plugin.
+ 
+ Copyright (c) 2011 Harvest http://getharvest.com
+
+ MIT License, https://github.com/harvesthq/chosen/blob/master/LICENSE.md
+*/
+
+.font-select {
+  font-size: 16px;
+  width: 80%;
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  *
+  display: inline;
+  box-sizing: border-box;
+}
+
+.font-select * {
+	box-sizing: border-box;
+}
+
+.font-select .fs-drop {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-top: 0;
+  position: absolute;
+  top: 31px;
+  left: 0;
+  z-index: 999;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.font-select > a {
+  background-color: #fff;
+  background-clip        : padding-box;
+  border: 1px solid #ddd;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding: 2px 0 2px 8px;
+  color: #181818;
+  text-decoration: none;
+  height: 30px;
+}
+
+.font-select > a span {
+  margin-right: 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 1.8;
+  -o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  font-size: 14px;
+}
+.font-select > a span:after{
+  font-family: dashicons;
+  content: "\f347";
+  position:absolute;
+  right:10px;
+  top:5px;
+  font-size:15px;
+  line-height:20px;
+}
+.font-select > a div {
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  width: 18px;
+  display: none;
+}
+
+.font-select > a div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.font-select .fs-drop {
+  -moz-background-clip   : padding;
+  -webkit-background-clip: padding-box;
+  background-clip        : padding-box;
+}
+
+.font-select .fs-results {
+  margin: 0;
+  max-height: 190px;
+  width: 100%;
+  padding: 0 4px 4px 4px;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.font-select .fs-results li {
+  line-height: 80%;
+  padding: 7px 7px 8px;
+  margin: 0;
+  list-style: none;
+  font-size: 18px;
+}
+
+.font-select .fs-results li.active {
+  background: #3875d7;
+  color: #fff;
+  cursor: pointer;
+}
+.font-select .fs-results li em {
+  background: #feffde;
+  font-style: normal;
+}
+
+.font-select .fs-results li.active em {
+  background: transparent;
+}
+
+.font-select-active > a {font-weight: bold;}
+
+.font-select-active > a {
+  border: 1px solid #ddd;
+  -webkit-border-bottom-left-radius : 0;
+  -webkit-border-bottom-right-radius: 0;
+  -moz-border-radius-bottomleft : 0;
+  -moz-border-radius-bottomright: 0;
+  border-bottom-left-radius : 0;
+  border-bottom-right-radius: 0;
+}
+
+.font-select-active > a div {
+  background: transparent;
+  border-left: none;
+}
+
+.font-select-active > a div b {
+  background-position: -18px 1px;
+}

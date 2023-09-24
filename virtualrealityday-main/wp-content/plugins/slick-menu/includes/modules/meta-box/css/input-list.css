@@ -1,0 +1,20 @@
+.sm-rwmb-input-list li{
+	line-height: 22px;
+}
+
+.sm-rwmb-input-list.inline li{
+	display:inline-block;
+	margin-right: 0;
+  line-height:1;
+}
+.sm-rwmb-input-list.inline li label {
+	margin-right: 10px;
+}
+
+.sm-rwmb-input-list.inline {
+    margin:0;
+}
+
+li .sm-rwmb-input-list {
+	margin-left: 15px;
+}

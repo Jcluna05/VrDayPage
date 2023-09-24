@@ -1,0 +1,7 @@
+.sm-rwmb-select-tree {
+	display: inline-block;
+}
+
+.sm-rwmb-select-tree.hidden {
+	display: none;
+}

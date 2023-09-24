@@ -1,0 +1,297 @@
+/* Welcome Page */
+
+.xt-notice {
+  display: inline-block !important;
+  margin-top: 20px;
+}
+
+.menu-top[class*=toplevel_page_xt-] {
+  font-size: 13px !important;
+}
+
+.xt-welcome-page {
+
+  #wpbody-content {
+
+    min-height: 600px;
+
+    .xt-welcome-wrap {
+      max-width: 1600px;
+    }
+
+    .xt-welcome-header {
+      position: relative;
+      margin: 35px 0 10px;
+
+      h1 {
+        font-size: 20px;
+        letter-spacing: -1px;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .xt-welcome-logo {
+        margin: 15px 0 15px;
+        img {
+          max-width: 200px;
+          border: 0;
+
+          @media screen and (max-width: 782px) {
+
+            & {
+              width: 250px;
+            }
+          }
+
+        }
+      }
+
+      .xt-logo{
+        width: 30px;
+        vertical-align: middle;
+        margin-top: -6px;
+        margin-right: 10px;
+      }
+
+      .xt-version {
+        font-size: 14px;
+        background: #1b95e0;
+        color: #fff;
+        padding: 4px 12px;
+        border-radius: 3px;
+        text-align: center;
+        display: inline-block;
+        position:absolute;
+        right:0;
+        top:8px;
+
+        em {
+          font-size: 10px;
+          line-height: 1;
+          margin-left: 5px;
+          top: -1px;
+          position: relative;
+        }
+
+        @media screen and (max-width: 782px) {
+
+          & {
+            font-size: 14px;
+            padding: 5px 10px;
+          }
+        }
+      }
+
+      .xt-welcome-description {
+        margin-top: 10px;
+        font-weight: 400;
+        line-height: 1.6;
+        font-size: 16px;
+        max-width: 70%;
+      }
+    }
+
+    .nav-tab-wrapper {
+      border-bottom: 0;
+
+      .xt-follow {
+        bottom: -6px;
+        &:before{
+          display:none;
+        }
+        a{
+          width:20px;
+          height:20px;
+        }
+      }
+
+      @media screen and (max-width: 782px) {
+
+        & {
+          margin-top: 20px;
+
+          .xt-follow {
+
+            bottom:5px;
+            margin:0;
+          }
+        }
+      }
+    }
+
+    .nav-tab {
+      padding: 5px 13px;
+      border: 0;
+      box-shadow: none !important;
+
+      @media screen and (max-width: 782px) {
+
+        & {
+          width: 100%;
+          box-sizing: border-box;
+          margin: 0 0 2px;
+        }
+      }
+    }
+
+    .nav-tab-active,
+    .nav-tab-active:hover,
+    .nav-tab-active:focus,
+    .nav-tab-active:focus:active,
+    .nav-tab-featured:hover {
+      border-bottom: 0;
+      background: #fdfdfd;
+      color: #000;
+    }
+
+    .nav-tab-featured {
+      background: #333;
+      color: greenyellow;
+    }
+
+    .xt-refresh-link {
+      float: right;
+      text-decoration: none;
+      font-size: 16px;
+      position: relative;
+      z-index: 10;
+
+      .dashicons {
+        font-size: 18px;
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    .xt-welcome-section,
+    .fs-section #poststuff {
+      box-shadow: 0 0px 10px 0 rgba(24, 24, 24, 0.07);
+      background: #fdfdfd;
+      padding: 25px 20px;
+      overflow: hidden;
+      h2 {
+        font-size: 20px;
+        margin: 8px -0 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #e5e5e5;
+      }
+      h3 {
+        position: relative;
+        top: -5px;
+        margin: 0 0 .6em;
+      }
+      h4 {
+        margin-top: 0;
+      }
+    }
+
+  }
+
+  &.rtl #wpbody-content .xt-version {
+    left: 0;
+    right: inherit;
+  }
+}
+
+/* Changelog */
+.xt-changelog {
+
+  h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    padding: 0px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    background: #fff;
+    overflow: hidden;
+    margin: 0 0 30px 0;
+
+    li {
+      margin: 0 !important;
+      display: block;
+      padding: 8px 10px;
+      box-sizing: border-box;
+      position: relative;
+      overflow: hidden;
+
+      strong {
+        background: #ffffcc;
+        color: #000;
+        padding: 1px 5px;
+        border-radius: 3px;
+      }
+
+
+      &:nth-child(even) {
+        background: #f9f9f9;
+      }
+
+      .update-type {
+        padding: 1px 8px;
+        display: block;
+        border-radius: 3px;
+        text-align: center;
+        width: 70px;
+        float: left;
+        box-sizing: border-box;
+        font-size: 12px;
+        line-height: 24px;
+        color: #181818;
+      }
+
+      .update-txt {
+        display: block;
+        padding-left: 85px;
+        box-sizing: border-box;
+        color: #181818;
+        line-height: 26px;
+        font-size: 14px;
+
+        a {
+          color: #000;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+
+      span.initial,
+      span.Initial {
+        background: rgb(228, 228, 169);
+      }
+
+      span.fix,
+      span.Fix {
+        background: rgb(244, 197, 197);
+      }
+
+      span.new,
+      span.New {
+        background: rgb(175, 231, 175);
+      }
+
+      span.enhance,
+      span.Enhance {
+        background: rgb(190, 212, 242);
+      }
+
+      span.update,
+      span.Update {
+        background: rgba(26, 224, 181, 0.3);
+      }
+
+      span.support,
+      span.Support {
+        background: rgba(203, 160, 255, 0.38);
+      }
+
+      span.extension,
+      span.Extension {
+        background: rgba(255, 152, 0, 0.50);
+      }
+    }
+  }
+}
+

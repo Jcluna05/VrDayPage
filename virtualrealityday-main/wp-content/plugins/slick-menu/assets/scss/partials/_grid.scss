@@ -1,0 +1,55 @@
+$margin: 0%;
+
+@for $cols from 1 through 12 {
+	$span: $cols;
+	@while $span > 0 {
+		@if ($span == $cols) {
+			.sm-col-#{$span}-#{$cols} { width: 100%; }
+		} @else {
+			.sm-col-#{$span}-#{$cols} { width: decimal-round( (((100 - ($margin * ($cols - 1))) / $cols) * $span) + (($span - 1) * $margin) , 2, 'floor'); }
+		}
+		$span: $span - 1;
+	}
+}
+
+.sm-menu {
+
+	.sm-nav-list {
+
+		&.sm-nav-align-left{
+			margin: 0;
+		}
+		&.sm-nav-align-center{
+			margin: 0 auto;
+		}
+		&.sm-nav-align-right{
+			margin: 0 0 0 100%;
+		}
+			
+		&.sm-col-align-left{
+			text-align:left;
+		}
+		&.sm-col-align-center{
+			text-align:center;
+		}
+		&.sm-col-align-right{
+			text-align:right;
+		}
+	}	
+	
+	/* Has to stay inline block required to center columns */
+	li[class*="sm-col-"]{
+		display: inline-block;
+	}	
+
+	.sm-av-bp-mobile &.sm-always-visible li[class*="sm-col-"],
+	.sm-bp-mobile &:not(.sm-always-visible) li[class*="sm-col-"]{
+		width:100%!important;
+	}
+	
+	.sm-av-bp-tablet &.sm-always-visible li[class*="sm-col-"]:not(.sm-col-1-1),
+	.sm-bp-tablet &:not(.sm-always-visible) li[class*="sm-col-"]:not(.sm-col-1-1){
+		width:50%!important;
+	}	
+
+}

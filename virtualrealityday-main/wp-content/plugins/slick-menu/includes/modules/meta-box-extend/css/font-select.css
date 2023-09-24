@@ -1,0 +1,69 @@
+.fs-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  }
+  .fs-wrapper .fs-toggle {
+    cursor: pointer;
+    position: absolute;
+    right: 9px;
+    top: 9px;
+    font-size: 18px;
+    line-height: 20px;
+    z-index: 2;
+    }
+
+.fs-input, .fs-list {
+  font-size: 18px;
+  line-height: 1em; }
+
+.fs-input {
+    cursor: pointer;
+    border: 0!important;
+    width: 100%;
+    height: 35px;
+    padding: 0px 10px;
+    position: relative;
+    box-sizing: border-box;
+  }
+.fs-selected-name {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	padding: 12px 10px;
+	box-sizing: border-box;
+	line-height: 1;
+	font-size: 15px;
+	cursor: pointer;
+}
+.fs-wrapper:hover .fs-selected-name{
+	background-color:#f9f9f9;
+}
+.fs-list {
+  background: white;
+  color: black;
+  border: 1px solid #eeeeee;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+  max-height: 12em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 37px;
+  left: -1px;
+  }
+  .fs-list li {
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 10px 0.5em;
+    margin: 0;
+    }
+    .fs-list li.selected,.fs-list li:hover {
+      background: #f9f9f9;
+      }

@@ -1,0 +1,6 @@
+html {
+  transition: all 0s !important; }
+
+.sm-overflow-fix .admin-bar header.fixed,
+.sm-overflow-fix .admin-bar header.sticky.sticky_animate {
+  padding-top: 0 !important; }

@@ -1,0 +1,30 @@
+
+/* SM Widgets */
+
+.sm-menu {
+	.slick-menu-widgets-wrap {
+    	padding:20px;
+	}			
+}
+
+
+/* SM Shortcodes*/
+
+.sm-menu {
+	.slick-menu-shortcodes-wrap {
+		padding:20px;
+	}	
+}	
+
+/* Rev Slider */
+
+.sm-always-visible.sm-menu-active {
+	.fullwidthbanner-container,
+	.fullscreen-container {
+    	left: 0!important;
+    	width:100%!important;
+    }	
+    .fullscreen-container {
+	    position:absolute!important;
+	}
+}

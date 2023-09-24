@@ -1,0 +1,45 @@
+@if index($hamburger-types, stand) {
+  /*
+   * Stand
+   */
+   .sm-hamburger--stand.sm-position-#{$hamburger-position} {
+    .sm-hamburger-inner {
+      @include transition(transform 0.1s 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19),
+                  background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+
+      &:before {
+        @include transition(top 0.1s 0.1s ease-in,
+                    transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+
+      &:after {
+        @include transition(bottom 0.1s 0.1s ease-in,
+                    transform 0.1s 0s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+    }
+
+    &.is-active {
+      .sm-hamburger-inner {
+        @include transform(rotate(90deg));
+        background-color: transparent;
+
+        @include transition(transform 0.1s 0s cubic-bezier(0.215, 0.61, 0.355, 1),
+                    background-color 0s 0.22s linear);
+
+        &:before {
+          top: 0;
+          @include transform(rotate(-45deg));
+          @include transition(top 0.1s 0.12s ease-out,
+                      transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1));
+        }
+
+        &:after {
+          bottom: 0;
+          @include transform(rotate(45deg));
+          @include transition(bottom 0.1s 0.12s ease-out,
+                      transform 0.1s 0.22s cubic-bezier(0.215, 0.61, 0.355, 1));
+        }
+      }
+    }
+  }
+}

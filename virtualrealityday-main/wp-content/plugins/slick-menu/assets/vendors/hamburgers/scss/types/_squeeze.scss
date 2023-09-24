@@ -1,0 +1,42 @@
+@if index($hamburger-types, squeeze) {
+  /*
+   * Squeeze
+   */
+   .sm-hamburger--squeeze.sm-position-#{$hamburger-position} {
+    .sm-hamburger-inner {
+      @include transition(transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+
+      &:before {
+        @include transition(top 0.1s 0.14s ease,
+                    opacity 0.1s ease, background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+
+      &:after {
+        @include transition(bottom 0.1s 0.14s ease,
+                    transform 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+    }
+
+    &.is-active {
+      .sm-hamburger-inner {
+        @include transform(rotate(45deg));
+        @include transition-delay(0.14s);
+        @include transition-timing-function(cubic-bezier(0.215, 0.61, 0.355, 1));
+
+        &:before {
+          top: 0;
+          opacity: 0;
+          @include transition(top 0.1s ease,
+                      opacity 0.1s 0.14s ease);
+        }
+
+        &:after {
+          bottom: 0;
+          @include transform(rotate(-90deg));
+          @include transition(bottom 0.1s ease,
+                      transform 0.1s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1));
+        }
+      }
+    }
+  }
+}

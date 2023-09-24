@@ -1,0 +1,41 @@
+@if index($hamburger-types, vortex-r) {
+  /*
+   * Vortex Reverse
+   */
+   .sm-hamburger--vortex-r.sm-position-#{$hamburger-position} {
+
+    .sm-hamburger-inner {
+      @include transition(transform 0.3s cubic-bezier(0.19, 1, 0.22, 1), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+
+      &:before {
+		@include transition(top 0s 0.1s linear, opacity 0s 0.1s linear, background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+
+      &:after {
+		@include transition(bottom 0s 0.1s linear, transform 0s 0.1s linear, background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+    }
+    
+    &.is-active {
+      .sm-hamburger-inner {
+        @include transform(rotate(-765deg));
+        @include transition-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
+
+        &:before,
+        &:after {
+          @include transition-delay(0s);
+        }
+
+        &:before {
+          top: 0;
+          opacity: 0;
+        }
+
+        &:after {
+          bottom: 0;
+          @include transform(rotate(-90deg));
+        }
+      }
+    }
+  }
+}

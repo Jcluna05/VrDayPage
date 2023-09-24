@@ -1,0 +1,18 @@
+@if index($hamburger-types, arrow-r) {
+  /*
+   * Arrow Right
+   */
+   .sm-hamburger--arrow-r.is-active.sm-position-#{$hamburger-position} {
+    .sm-hamburger-inner {
+      &:before {
+          @include transform(translate3d(-$hamburger-layer-border-radius * 0.2, ($hamburger-layer-spacing + $hamburger-layer-height), 0px) rotate(40deg) scale(0.6, 1));
+		  @include transform-origin(right);
+      }
+
+      &:after {
+          @include transform(translate3d(-$hamburger-layer-border-radius * 0.2, -($hamburger-layer-spacing + $hamburger-layer-height), 0px) rotate(-40deg) scale(0.6, 1));
+        @include transform-origin(right);
+      }
+    }
+  }
+}

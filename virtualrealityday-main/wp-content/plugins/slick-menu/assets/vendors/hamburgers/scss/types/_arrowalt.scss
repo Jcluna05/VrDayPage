@@ -1,0 +1,57 @@
+@if index($hamburger-types, arrowalt) {
+  /*
+   * Arrow Alt
+   */
+   .sm-hamburger--arrowalt.sm-position-#{$hamburger-position} {
+    .sm-hamburger-inner {
+      &:before {
+        @include transition(top 0.1s 0.15s ease,
+                    transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1));
+      }
+
+      &:after {
+        @include transition(bottom 0.1s 0.15s ease,
+                    transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1));
+      }
+    }
+
+    &.is-active {
+      .sm-hamburger-inner {
+        &:before {
+          top: 0;
+          @include transform(translate3d($hamburger-layer-border-radius * 0.2 , 0px, 0px) rotate(-40deg) scale(0.6, 1));
+          @include transform-origin(left);
+          @include transition(top 0.1s ease,
+                      transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22));
+        }
+
+        &:after {
+          bottom: 0;
+          @include transform(translate3d($hamburger-layer-border-radius * 0.2, 0px, 0px) rotate(40deg) scale(0.6, 1));
+          @include transform-origin(left);
+          @include transition(bottom 0.1s ease,
+                      transform 0.15s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22));
+        }
+      }
+    }
+    
+    &:not(.is-active) {
+      .sm-hamburger-inner {
+	      
+	    @include transition(background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+
+		&:before {
+			@include transition(top 0.1s 0.15s ease,
+		            transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+		}
+		
+		&:after {
+			@include transition(bottom 0.1s 0.15s ease,
+		            transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+		}
+
+      }	    
+	} 
+	    
+  }
+}

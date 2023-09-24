@@ -1,0 +1,43 @@
+/* Image */
+.sm-rwmb-image-item {
+	position: relative;
+	float: left;
+	padding: 0;
+	margin: 0 5px 5px 0;
+	box-sizing: border-box;
+	width: 150px;
+}
+.sm-rwmb-image-item .sm-rwmb-media-preview {
+	width: 150px;
+}
+.sm-rwmb-image-item .dashicons {
+	font-size: 20px;
+	width: 20px;
+	height: 20px;
+}
+.sm-rwmb-media-bar {
+	position: absolute;
+	z-index: 10;
+	display: none;
+	right: 5px;
+	top: 5px;
+	color: #fff;
+}
+.sm-rwmb-media-bar a {
+	text-decoration: none;
+	color: inherit;
+}
+.sm-rwmb-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .6);
+	display: none;
+}
+.sm-rwmb-image-item:hover .sm-rwmb-media-bar,
+.sm-rwmb-image-item:hover .sm-rwmb-overlay {
+	display: block;
+	cursor: move;
+}

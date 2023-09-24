@@ -1,0 +1,112 @@
+
+.sm-rwmb-accordion-title {
+  margin: 0;
+  display: block;
+  border: 1px solid #eaeaea;
+  background: #fdfdfd;
+  position:relative;
+}
+
+.sm-rwmb-accordion-title.sm-rwmb-accordion-active {
+  background: #f9f9f9;
+  border-bottom:0;
+}
+.sm-rwmb-accordion-title:hover{
+  background:#f9f9f9;
+}
+.sm-rwmb-accordion-title:not(:first-child) {
+  border-top:0;
+}
+ 
+.sm-rwmb-accordion-title a {
+  display: block;
+  padding: 15px 15px;
+  text-decoration: none;
+  color: #444;
+  font-weight:bold;
+  font-size:14px;
+}
+
+
+.sm-rwmb-accordion-title a:active,
+.sm-rwmb-accordion-title a:focus {
+  outline: none;
+  box-shadow: none;
+}
+.sm-rwmb-accordion-title i,
+.sm-rwmb-accordion-title img {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.sm-rwmb-accordion-title i {
+  width: 20px;
+  height: 18px;
+  font-size: 18px;
+}
+.sm-rwmb-accordion-title a:after{
+    display: inline-block;
+    font-family: dashicons;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: absolute;
+    top: 16px;
+    right: 15px;
+    content: "\f132";
+}
+.sm-rwmb-accordion-active a:after {
+    content: "\f460";
+}
+.sm-rwmb-accordion-title img {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+}
+.sm-rwmb-accordion-active a {
+  color: #333;
+}
+.sm-rwmb-accordion-panel {
+  padding: 10px 15px 0;
+  border: solid 1px #eee;
+  display: none;
+}
+.sm-rwmb-accordion-active + .sm-rwmb-accordion-panel{
+  display:block;
+}
+.sm-rwmb-accordions-box .sm-rwmb-accordion-title{
+  background: #ebebeb;
+  border: 1px solid #dedede;
+  margin-right: 5px;
+}
+.sm-rwmb-accordions-box .sm-rwmb-accordion-title:hover {
+  background: #fff;
+}
+.sm-rwmb-accordions-box .sm-rwmb-accordion-title a {
+  color: #777;
+}
+.sm-rwmb-accordions-box .sm-rwmb-accordion-title.sm-rwmb-accordion-active {
+  border-bottom-color: transparent;
+}
+.sm-rwmb-accordions-box .sm-rwmb-accordion-title.sm-rwmb-accordion-active,
+.sm-rwmb-accordions-box .sm-rwmb-accordion-title.sm-rwmb-accordion-active:hover {
+  background: #f5f5f5;
+}
+.sm-rwmb-accordions-box .sm-rwmb-accordion-title.sm-rwmb-accordion-active a {
+  color: #555;
+}
+.sm-rwmb-accordions-box .sm-rwmb-accordion-panel {
+  background: #f5f5f5;
+}
+.sm-rwmb-accordions-no-controls {
+  border: 0;
+  background: transparent;
+}
+.sm-rwmb-accordions-no-controls .hndle,
+.sm-rwmb-accordions-no-controls .handlediv {
+  display: none;
+}
+.sm-rwmb-accordions-no-controls .inside {
+  margin: 0;
+  padding: 0;
+}

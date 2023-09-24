@@ -1,0 +1,58 @@
+@if index($hamburger-types, emphatic-r) {
+  /*
+   * Emphatic Reverse
+   */
+   .sm-hamburger--emphatic-r.sm-position-#{$hamburger-position} {
+
+    .sm-hamburger-inner {
+      @include transition(background-color $hamburger-hover-transition-duration ($hamburger-hover-transition-duration * 1.25) $hamburger-hover-transition-timing-function);
+	  
+      &:before {
+        left: 0;
+        @include transition(transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+                    top 0.05s 0.2s linear,
+                    left 0.2s 0.25s ease-in, background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+
+      &:after {
+        top: ($hamburger-layer-height) + ($hamburger-layer-spacing);
+        right: 0;
+        @include transition(transform 0.2s cubic-bezier(0.6, 0.04, 0.98, 0.335),
+                    top 0.05s 0.2s linear,
+                    right 0.2s 0.25s ease-in, background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+    }
+    
+    &:hover{
+	   .sm-hamburger-inner {
+	   		@include transition(background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+	   }
+    }
+
+    &.is-active {
+      .sm-hamburger-inner {
+        @include transition-delay(0s);
+        @include transition-timing-function(ease-out);
+        background-color: transparent!important;
+
+        &:before {
+          left: $hamburger-layer-width * -2;
+          top: $hamburger-layer-width * 2;
+          @include transform(translate3d($hamburger-layer-width * 2, $hamburger-layer-width * -2, 0) rotate(-45deg));
+          @include transition(left 0.2s ease-out,
+                      top 0.05s 0.2s linear,
+                      transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+        }
+
+        &:after {
+          right: $hamburger-layer-width * -2;
+          top: $hamburger-layer-width * 2;
+          @include transform(translate3d($hamburger-layer-width * -2, $hamburger-layer-width * -2, 0) rotate(45deg));
+          @include transition(right 0.2s ease-out,
+                      top 0.05s 0.2s linear,
+                      transform 0.2s 0.25s cubic-bezier(0.075, 0.82, 0.165, 1));
+        }
+      }
+    }
+  }
+}

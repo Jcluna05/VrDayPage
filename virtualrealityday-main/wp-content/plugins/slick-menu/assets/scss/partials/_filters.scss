@@ -1,0 +1,120 @@
+.sm-filter-none {
+    filter: inherit;
+    opacity:1;
+}
+.sm-filter-none-hover:hover .sm-filter-hover{
+	filter: inherit!important;
+	opacity:1!important;
+}
+	
+.sm-filter-grayscale {
+    filter: grayscale(1);
+}
+.sm-filter-grayscale-hover:hover .sm-filter-hover{
+	filter: grayscale(1)!important;
+}
+
+.sm-filter-sepia {
+    filter: sepia(1);
+}
+.sm-filter-sepia-hover:hover .sm-filter-hover{
+	filter: sepia(1)!important;
+}
+
+.sm-filter-saturate {
+    filter: saturate(4);
+}
+.sm-filter-saturate-hover:hover .sm-filter-hover{
+	filter: saturate(4)!important;
+}
+
+.sm-filter-invert {
+    filter: invert(.8);
+}
+.sm-filter-invert-hover:hover .sm-filter-hover{
+	filter: invert(.8)!important;
+}
+
+.sm-filter-opacity {
+    filter: opacity(.5);
+}
+.sm-filter-opacity-hover:hover .sm-filter-hover{
+	filter: opacity(.5)!important;
+}
+
+.sm-filter-brightness {
+    filter: brightness(.5);
+}
+.sm-filter-brightness-hover:hover .sm-filter-hover{
+	filter: brightness(.5)!important;
+}
+
+.sm-filter-contrast {
+    filter: contrast(3);
+}
+.sm-filter-contrast-hover:hover .sm-filter-hover{
+	filter: contrast(3)!important;
+}
+
+.sm-filter-blur {
+    filter: blur(3px);
+}
+.sm-filter-blur-hover:hover .sm-filter-hover{
+	filter: blur(3px)!important;
+}
+
+.sm-filter-tint {
+    filter: sepia(1) hue-rotate(200deg);
+}
+.sm-filter-tint-hover:hover .sm-filter-hover{
+	filter: sepia(1) hue-rotate(200deg)!important;
+}
+
+.sm-filter-inkwell {
+    filter: grayscale(1) brightness(0.45) contrast(1.05);
+}
+.sm-filter-inkwell-hover:hover .sm-filter-hover{
+	filter: grayscale(1) brightness(0.45) contrast(1.05)!important;
+}
+
+.sm-filter-hue-rotate-90 {
+    filter: hue-rotate(90deg);
+}
+.sm-filter-hue-rotate-90-hover:hover .sm-filter-hover{
+	filter: hue-rotate(90deg)!important;
+}
+
+.sm-filter-hue-rotate-180 {
+    filter: hue-rotate(180deg);
+}
+.sm-filter-hue-rotate-180-hover:hover .sm-filter-hover{
+	filter: hue-rotate(180deg)!important;
+}
+
+.sm-filter-hue-rotate-270 {
+    filter: hue-rotate(270deg);
+}
+.sm-filter-hue-rotate-270-hover:hover .sm-filter-hover{
+	filter: hue-rotate(270deg)!important;
+}
+
+.sm-filter-hue-rotate-360 {
+    filter: hue-rotate(360deg);
+}
+.sm-filter-hue-rotate-360-hover:hover .sm-filter-hover{
+	filter: hue-rotate(360deg)!important;
+}
+
+.sm-filter-half-transparent {
+    opacity: 0.5;
+}
+.sm-filter-half-transparent-hover:hover .sm-filter-hover{
+	opacity: 0.5!important;
+}
+
+.sm-filter-transparent {
+    opacity: 0;
+}
+.sm-filter-transparent-hover:hover .sm-filter-hover{
+	opacity: 0!important;
+}

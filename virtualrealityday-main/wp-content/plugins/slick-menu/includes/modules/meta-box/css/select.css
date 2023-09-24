@@ -1,0 +1,10 @@
+.sm-rwmb-select {
+	min-width: 160px;
+}
+.sm-rwmb-select option {
+    padding: .5rem 1rem;
+}
+.sm-rwmb-select-all-none {
+	display: block;
+	margin-top: 5px;
+}

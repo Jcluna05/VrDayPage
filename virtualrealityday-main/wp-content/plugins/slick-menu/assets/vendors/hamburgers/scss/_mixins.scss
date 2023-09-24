@@ -1,0 +1,173 @@
+
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@function prefix($property, $prefixes: (webkit moz o ms)) {
+    $vendor-prefixed-properties: transform background-clip background-size;
+    $result: ();
+    @each $prefix in $prefixes {
+       @if index($vendor-prefixed-properties, $property) {
+         $property: #{-$prefix}-#{$property}
+       }
+       $result: append($result, $property);
+    }
+    @return $result;
+}
+
+@function trans-prefix($transition, $prefix: moz) {
+    $prefixed: ();
+    @each $trans in $transition {
+        $prop-name: nth($trans, 1);
+        $vendor-prop-name: prefix($prop-name, $prefix);
+        $prop-vals: nth($trans, 2);
+        $prefixed: append($prefixed, ($vendor-prop-name $prop-vals), comma);
+    }
+    
+    @return $prefixed;
+}
+
+@function prop-prefix($property, $prefix: moz) {
+    $prefixed: ();
+    @each $prop in $property {
+        $prop-name: $prop;
+        $vendor-prop-name: prefix($prop-name, $prefix);
+        $prefixed: append($prefixed, ($vendor-prop-name), comma);
+    }
+    @return $prefixed;
+}
+
+@mixin prefix($property, $value) {
+
+  -webkit-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+/// Transition
+/// @param {List} $properties - Properties
+/// @require {mixin} prefix
+
+@mixin transition($values...) { 
+    $transitions: ();
+    @each $declaration in $values {
+        $prop: nth($declaration, 1);
+        $prop-opts: ();
+        $length: length($declaration);
+        @for $i from 2 through $length {
+            $prop-opts: append($prop-opts, nth($declaration, $i));   
+        }
+        $trans: ($prop, $prop-opts);
+        $transitions: append($transitions, $trans, comma);
+    }
+      
+    -webkit-transition: trans-prefix($transitions, webkit);
+    -moz-transition: trans-prefix($transitions, moz);
+    -o-transition: trans-prefix($transitions, o);
+    transition: $values;
+}
+
+/// Transition-Property
+/// @param {List} $properties - Properties
+/// @require {mixin} prefix
+
+@mixin transition-property($values...) { 
+
+    -webkit-transition-property: prop-prefix($values, webkit);
+    -moz-transition-property: prop-prefix($values, moz);
+    -o-transition-property: prop-prefix($values, o);
+    transition-property: $values;
+}
+
+/// Transition-Timing-Function
+/// @param {List} $properties - Properties
+/// @require {mixin} prefix
+
+@mixin transition-timing-function($properties...) {
+
+  @if length($properties) >= 1 {
+    @include prefix('transition-timing-function', $properties);
+  }
+
+  @else {
+    @include prefix('transition-timing-function',  "ease-in-out");
+  }
+}
+
+
+/// Transition-Duration
+/// @param {List} $properties - Properties
+/// @require {mixin} prefix
+
+@mixin transition-duration($properties...) {
+
+  @if length($properties) >= 1 {
+    @include prefix('transition-duration', $properties);
+  }
+
+  @else {
+    @include prefix('transition-duration',  "0.2s");
+  }
+}
+
+
+/// Transition-Delay
+/// @param {List} $properties - Properties
+/// @require {mixin} prefix
+
+@mixin transition-delay($properties...) {
+
+  @if length($properties) >= 1 {
+    @include prefix('transition-delay', $properties);
+  }
+
+  @else {
+    @include prefix('transition-delay',  "1s");
+  }
+}
+
+
+
+
+/// Transform
+/// @param {List} $params - Params
+/// @require {mixin} prefix
+
+@mixin transform($params) {
+  @include prefix('transform', $params);
+}
+
+
+/// Transform-Origin
+/// @param {List} $params - Params
+/// @require {mixin} prefix
+
+@mixin transform-origin($params) {
+  @include prefix('transform-origin', $params);
+}
+
+// Transform-Style
+/// @param {List} $params - Params
+/// @require {mixin} prefix
+
+@mixin transform-style($style: preserve-3d) {
+  @include prefix('transform-style', $style);
+}
+
+
+/// Perspective
+/// @param {List} $params - Params
+/// @require {mixin} prefix
+@mixin perspective($params) {
+  @include prefix('perspective', $params);
+}
+
+/// Perspective-Origin
+/// @param {List} $params - Params
+/// @require {mixin} prefix
+@mixin perspective-origin($params){
+  @include prefix('perspective-origin', $params);
+}
+

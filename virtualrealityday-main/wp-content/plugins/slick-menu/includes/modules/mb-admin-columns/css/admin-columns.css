@@ -1,0 +1,30 @@
+.sm-mb-admin-columns ul {
+  margin-top: 0;
+}
+.sm-mb-admin-columns iframe {
+  max-width: 100%;
+  height: auto;
+}
+.sm-mb-admin-columns-image li,
+.sm-mb-admin-columns-image_advanced li,
+.sm-mb-admin-columns-plupload_image li,
+.sm-mb-admin-columns-thickbox_image li,
+.sm-mb-admin-columns-color li {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+}
+.sm-mb-admin-columns-image img,
+.sm-mb-admin-columns-image_advanced img,
+.sm-mb-admin-columns-plupload_image img,
+.sm-mb-admin-columns-thickbox_image img {
+  width: 48px;
+  height: 48px;
+  max-width: 100%;
+  border-radius: 2px;
+}
+.sm-mb-admin-columns-color {
+  text-align: center;
+}
+.sm-mb-admin-columns-color span {
+  box-shadow: 0 1px 3px #999;
+}

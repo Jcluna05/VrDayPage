@@ -1,0 +1,62 @@
+.sm-rwmb-row:before,
+.sm-rwmb-row:after {
+  content: " ";
+  display: table;
+}
+.sm-rwmb-row:after {
+  clear: both;
+}
+.sm-rwmb-row .sm-rwmb-column {
+  margin-right: 5%;
+  float: left;
+}
+.sm-rwmb-row .sm-rwmb-column:last-of-type {
+  margin-right: 0;
+}
+.sm-rwmb-field .sm-rwmb-row {
+  display: block;
+}
+.sm-rwmb-column-12 {
+  width: 100%;
+}
+.sm-rwmb-column-11 {
+  width: 91.25%;
+}
+.sm-rwmb-column-10 {
+  width: 82.5%;
+}
+.sm-rwmb-column-9 {
+  width: 73.75%;
+}
+.sm-rwmb-column-8 {
+  width: 65%;
+}
+.sm-rwmb-column-7 {
+  width: 56.25%;
+}
+.sm-rwmb-column-6 {
+  width: 47.5%;
+}
+.sm-rwmb-column-5 {
+  width: 38.75%;
+}
+.sm-rwmb-column-4 {
+  width: 30%;
+}
+.sm-rwmb-column-3 {
+  width: 21.25%;
+}
+.sm-rwmb-column-2 {
+  width: 12.5%;
+}
+.sm-rwmb-column-1 {
+  width: 3.75%;
+}
+.sm-rwmb-column .sm-rwmb-label,
+.sm-rwmb-column .sm-rwmb-label ~ .sm-rwmb-input {
+  display: block;
+  width: 100%;
+}
+.sm-rwmb-column * {
+  max-width: 100%;
+}

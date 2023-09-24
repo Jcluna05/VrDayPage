@@ -1,0 +1,38 @@
+/* Change the colors of the table head row */
+.tablepress thead th,
+.tablepress tfoot th {
+	background-color: #3055cf; /* #8fbc22 */
+	color: #ffffff;
+}
+
+/* Poner borde a la tabla */
+/*.tablepress tbody td {
+	border: 1px solid #bfcad4 !important;
+}*/
+/**change the hover color when sorting, and the background color of the column that is currently sorted */
+.tablepress thead .sorting_asc,
+.tablepress thead .sorting_desc,
+.tablepress thead .sorting:hover {
+	background-color: #4687e3;
+	color: #ffffff;
+}
+
+/*  */
+/*.tablepress-id-1 tbody td {*/
+.tablepress tbody td {
+	font-family: Roboto;
+	font-size: 14px; /*font-weight: bold;*/
+	color: #808c95;
+}
+
+.tablepress .column-1 {
+	width: 15%;
+}
+
+.tablepress .column-2 {
+	width: 15%;
+}
+
+.tablepress .column-3 {
+	width: 20%;
+}

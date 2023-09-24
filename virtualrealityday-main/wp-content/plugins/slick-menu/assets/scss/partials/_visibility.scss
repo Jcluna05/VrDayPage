@@ -1,0 +1,29 @@
+.sm-hamburger {
+
+	&.sm-show-on-desktop-only{
+		display:none;
+	}
+	&.sm-show-on-mobile-only{
+		display:none;
+	}
+		
+	html:not(.sm-bp-mobile) &{
+	
+		&.sm-show-on-desktop-only{
+			display:block;
+		}
+		&.sm-show-on-mobile-only{
+			display:none;
+		}
+	}
+	
+	html.sm-bp-mobile &{
+	
+		&.sm-show-on-desktop-only{
+			display:none;
+		}
+		&.sm-show-on-mobile-only {
+			display:block;	
+		}	
+	}
+}

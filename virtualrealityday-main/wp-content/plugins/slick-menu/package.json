@@ -1,0 +1,38 @@
+{
+  "name": "slick-menu",
+  "title": "Slick Menu",
+  "description": "=== Slick Menu ===",
+  "version": "1.0.0",
+  "homepage": "https://bitbucket.org/ghaddad/slick-menu#readme",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "del": "^2.2.1",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-cache": "^0.4.5",
+    "gulp-coffee": "latest",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "latest",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-jshint": "^2.0.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rtlcss": "^1.4.0",
+    "gulp-sass": "latest",
+    "gulp-sassbeautify": "^0.1.0",
+    "gulp-uglify": "^1.5.4",
+    "gulp-util": "latest"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ghaddad@bitbucket.org/ghaddad/slick-menu.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

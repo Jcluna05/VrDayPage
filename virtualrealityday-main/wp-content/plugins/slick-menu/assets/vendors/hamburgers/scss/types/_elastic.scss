@@ -1,0 +1,40 @@
+@if index($hamburger-types, elastic) {
+  /*
+   * Elastic
+   */
+   .sm-hamburger--elastic.sm-position-#{$hamburger-position} {
+    .sm-hamburger-inner {
+      top: $hamburger-layer-height / 2;
+      @include transition(transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+
+      &:before {
+        top: $hamburger-layer-height + $hamburger-layer-spacing;
+        @include transition(opacity 0.15s 0.4s ease, background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+
+      &:after {
+        top: ($hamburger-layer-height * 2) + ($hamburger-layer-spacing * 2);
+        @include transition(transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55), background-color $hamburger-hover-transition-duration $hamburger-hover-transition-timing-function);
+      }
+    }
+
+    &.is-active {
+      .sm-hamburger-inner {
+        $y-offset: $hamburger-layer-spacing + $hamburger-layer-height;
+
+        @include transform(translate3d(0, $y-offset, 0) rotate(135deg));
+        @include transition-delay(0.1s);
+
+        &:before {
+          @include transition-delay(0s);
+          opacity: 0;
+        }
+
+        &:after {
+          @include transform(translate3d(0, $y-offset * -2, 0) rotate(-270deg));
+          @include transition-delay(0.1s);
+        }
+      }
+    }
+  }
+}

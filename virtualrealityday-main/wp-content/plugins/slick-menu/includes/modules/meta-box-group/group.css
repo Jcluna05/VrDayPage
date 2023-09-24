@@ -1,0 +1,14 @@
+.sm-rwmb-group-wrapper .sm-rwmb-clone:after {
+	content: "";
+	display: block;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+	border-bottom: 1px solid #e0e0e0;
+}
+.sm-rwmb-group-wrapper .add-clone {
+	margin-bottom: 30px;
+}
+/* Nested clone */
+.sm-rwmb-clone .sm-rwmb-clone {
+	margin-right: 25px;
+}
