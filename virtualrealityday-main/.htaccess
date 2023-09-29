@@ -154,9 +154,9 @@
 # Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^virtualrealityday\.utpl.edu.ec [NC]
+# RewriteCond %{HTTP_HOST} ^virtualrealityday\.utpl.edu.ec [NC]
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://www.virtualrealityday.utpl.edu.ec/$1 [R,L]
+# RewriteRule ^(.*)$ https://www.virtualrealityday.utpl.edu.ec/$1 [R,L]
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
