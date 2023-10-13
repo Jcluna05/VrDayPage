@@ -154,14 +154,11 @@
 # Cualquier cambio en las directivas que hay entre esos marcadores serán sobrescritas.
 <IfModule mod_rewrite.c>
 RewriteEngine On
-# RewriteCond %{HTTP_HOST} ^virtualrealityday\.utpl.edu.ec [NC]
-RewriteCond %{SERVER_PORT} 80
-# RewriteRule ^(.*)$ https://www.virtualrealityday.utpl.edu.ec/$1 [R,L]
-RewriteBase /
+RewriteBase /VrDayPage/virtualrealityday-main/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+RewriteRule . /VrDayPage/virtualrealityday-main/index.php [L]
 </IfModule>
 
 # END WordPress
